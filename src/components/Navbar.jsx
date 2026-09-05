@@ -39,7 +39,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a href={profile.whatsapp} target="_blank" rel="noreferrer" className="btn btn-primary nav-cta">
+          <a href={profile.whatsappHire} target="_blank" rel="noreferrer" className="btn btn-primary nav-cta">
             Hire Me <ArrowUpRight size={16} />
           </a>
 

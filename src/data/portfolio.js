@@ -25,6 +25,8 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/niyass-fathima-nufa-350020346',
   linkedinShort: 'niyass-fathima-nufa-350020346',
   whatsapp: 'https://wa.me/94776380466',
+  whatsappHire:
+    'https://wa.me/94776380466?text=Hi%20Nufa%2C%20I%27d%20like%20to%20hire%20you.%20Can%20we%20talk%3F',
   cvFile: 'Nufa-CV.pdf',
   tagline: 'Building user-friendly apps at the intersection of design, data, and code.',
   about:
