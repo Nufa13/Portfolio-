@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
-import { Send, MapPin, Rocket, Braces } from 'lucide-react'
+import { Send, MapPin, Rocket, Download } from 'lucide-react'
 import { profile } from '../data/portfolio'
 import { useTypewriter } from '../hooks/useTypewriter'
 import { useCountUp } from '../hooks/useCountUp'
+
+const cvUrl = import.meta.env.BASE_URL + 'Nufa-CV.pdf'
 
 const container = {
   hidden: {},
@@ -61,8 +63,8 @@ export default function Hero() {
               <a href="#contact" className="btn btn-primary">
                 <Send size={16} /> Let&apos;s Connect
               </a>
-              <a href="#projects" className="btn btn-ghost">
-                <Braces size={16} /> View Projects
+              <a href={cvUrl} download="Niyas-Fathima-Nufa-CV.pdf" className="btn btn-ghost">
+                <Download size={16} /> Download CV
               </a>
             </motion.div>
 

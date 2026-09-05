@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import { Mail, MapPin, Send, Linkedin, Github, CheckCircle2 } from 'lucide-react'
+import { Mail, MapPin, Phone, Send, Linkedin, MessageCircle, FileDown, CheckCircle2 } from 'lucide-react'
 import { profile } from '../data/portfolio'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+
+const cvUrl = import.meta.env.BASE_URL + 'Nufa-CV.pdf'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
@@ -25,7 +27,7 @@ export default function Contact() {
           num="05"
           tag="contact"
           title="Let's Build Together"
-          sub="Have an internship, project, or opportunity in mind? My inbox is always open."
+          sub="Have an internship, project, or opportunity in mind? Reach out — I reply fast."
         />
 
         <div className="contact-grid">
@@ -36,6 +38,20 @@ export default function Contact() {
                 <div>
                   <strong>Email</strong>
                   <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="icon"><Phone size={20} /></span>
+                <div>
+                  <strong>Phone / WhatsApp</strong>
+                  <p><a href={`tel:${profile.phoneRaw}`}>{profile.phone}</a></p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="icon"><Linkedin size={20} /></span>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <p><a href={profile.linkedin} target="_blank" rel="noreferrer">{profile.linkedinShort}</a></p>
                 </div>
               </div>
               <div className="contact-item">
@@ -51,14 +67,17 @@ export default function Contact() {
               </p>
 
               <div className="social-row">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="social-btn" aria-label="GitHub">
-                  <Github size={20} />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-btn" aria-label="LinkedIn">
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="social-btn" aria-label="LinkedIn">
                   <Linkedin size={20} />
+                </a>
+                <a href={profile.whatsapp} target="_blank" rel="noreferrer" className="social-btn" aria-label="WhatsApp">
+                  <MessageCircle size={20} />
                 </a>
                 <a href={`mailto:${profile.email}`} className="social-btn" aria-label="Email">
                   <Mail size={20} />
+                </a>
+                <a href={cvUrl} download="Niyas-Fathima-Nufa-CV.pdf" className="social-btn" aria-label="Download CV">
+                  <FileDown size={20} />
                 </a>
               </div>
             </div>

@@ -20,6 +20,12 @@ export const profile = {
   role: 'Software Developer & IT Undergraduate',
   location: 'Sri Lanka',
   email: 'niyassfathimanufa@gmail.com',
+  phone: '+94 77 638 0466',
+  phoneRaw: '+94776380466',
+  linkedin: 'https://www.linkedin.com/in/niyass-fathima-nufa-350020346',
+  linkedinShort: 'niyass-fathima-nufa-350020346',
+  whatsapp: 'https://wa.me/94776380466',
+  cvFile: 'Nufa-CV.pdf',
   tagline: 'Building user-friendly apps at the intersection of design, data, and code.',
   about:
     'Aspiring Software Developer and Information Technology undergraduate with a strong foundation in software development, web development, database management, system analysis and design, and software engineering. Currently pursuing a Higher National Diploma in Information Technology (HNDIT) at the Sri Lanka Institute of Advanced Technological Education (SLIATE).',
@@ -150,10 +156,15 @@ export const experiences = [
 
 export const contact = {
   email: 'niyassfathimanufa@gmail.com',
+  phone: '+94 77 638 0466',
+  phoneRaw: '+94776380466',
   location: 'Sri Lanka',
+  linkedin: 'https://www.linkedin.com/in/niyass-fathima-nufa-350020346',
+  whatsapp: 'https://wa.me/94776380466',
+  cvFile: 'Nufa-CV.pdf',
   socials: [
-    { label: 'GitHub', href: 'https://github.com', icon: 'github' },
-    { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'linkedin' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/niyass-fathima-nufa-350020346', icon: 'linkedin' },
+    { label: 'WhatsApp', href: 'https://wa.me/94776380466', icon: 'whatsapp' },
     { label: 'Email', href: 'mailto:niyassfathimanufa@gmail.com', icon: 'mail' },
   ],
 }
