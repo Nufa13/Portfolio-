@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
-import { navLinks } from '../data/portfolio'
+import { navLinks, profile } from '../data/portfolio'
 import { useActiveSection } from '../hooks/useActiveSection'
 
 export default function Navbar() {
@@ -39,7 +39,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a href="#contact" className="btn btn-primary nav-cta">
+          <a href={profile.whatsapp} target="_blank" rel="noreferrer" className="btn btn-primary nav-cta">
             Hire Me <ArrowUpRight size={16} />
           </a>
 

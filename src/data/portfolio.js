@@ -100,20 +100,22 @@ export const projects = [
     tagline: 'Digital Services Platform',
     description:
       'A full-stack digital services platform connecting users with local services. Features secure authentication, service search, booking flows, and an admin dashboard.',
-    stack: ['React.js', 'PHP', 'MySQL', 'Supabase'],
+    stack: ['React.js', 'Vite', 'JavaScript', 'Supabase', 'PostgreSQL', 'Vercel'],
     icon: Globe,
     accent: '#7c6cff',
     link: '#',
+    live: 'https://lenzora-lk.vercel.app',
   },
   {
     name: 'Cricket Scorecard System',
     tagline: 'Sports Analytics System',
     description:
       'A web-based system for recording live cricket matches, managing ball-by-ball scores, player stats, and generating match summaries with a clean scorecard UI.',
-    stack: ['JavaScript', 'PHP', 'PostgreSQL', 'CSS'],
+    stack: ['React.js', 'Vite', 'JavaScript', 'Supabase', 'PostgreSQL', 'Vercel'],
     icon: Code2,
     accent: '#00d4ff',
     link: '#',
+    live: 'https://scorecard-sandy-nine.vercel.app',
   },
   {
     name: 'Smart Travel Assistant',
@@ -124,6 +126,7 @@ export const projects = [
     icon: Rocket,
     accent: '#ff5ea8',
     link: '#',
+    live: '#',
   },
 ]
 

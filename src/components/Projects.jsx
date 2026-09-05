@@ -48,12 +48,16 @@ export default function Projects() {
                 ))}
               </ul>
               <div className="project-links">
-                <a href={p.link} aria-label={`View ${p.name}`}>
-                  <Github size={15} /> Code
-                </a>
-                <a href={p.link} aria-label={`Visit ${p.name}`}>
-                  View <ArrowUpRight size={15} />
-                </a>
+                {p.link !== '#' && (
+                  <a href={p.link} aria-label={`View ${p.name} code`}>
+                    <Github size={15} /> Code
+                  </a>
+                )}
+                {p.live !== '#' && (
+                  <a href={p.live} target="_blank" rel="noreferrer" aria-label={`Visit ${p.name} live`}>
+                    View Live <ArrowUpRight size={15} />
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}
