@@ -1,10 +1,8 @@
-import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
 import { profile, techChips } from '../data/portfolio'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
-const photo = import.meta.env.BASE_URL + 'Nufa.jpeg'
 const cvUrl = import.meta.env.BASE_URL + 'Nufa-CV.pdf'
 
 export default function About() {
@@ -19,42 +17,6 @@ export default function About() {
         />
 
         <div className="about-grid">
-          <Reveal>
-            <div className="id-holder">
-              <div className="id-clip" aria-hidden="true" />
-              <div className="id-lanyard" aria-hidden="true" />
-              <motion.div
-                className="id-card"
-                initial={{ opacity: 0, y: 30, rotate: 2 }}
-                whileInView={{ opacity: 1, y: 0, rotate: 1.5 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -6 }}
-              >
-                <div className="id-band">
-                  <div>
-                    <strong className="org">SLIATE</strong>
-                    <br />
-                    <small>HNDIT · 2023–2026</small>
-                  </div>
-                  <div className="id-chip" aria-hidden="true" />
-                </div>
-                <div className="id-photo">
-                  <img src={photo} alt={`${profile.name} portrait`} />
-                </div>
-                <div className="id-info">
-                  <h4>{profile.name}</h4>
-                  <p>{profile.role}</p>
-                  <span className="tag">Software Developer</span>
-                </div>
-                <div className="id-bottom">
-                  <small>ID: NN-2026</small>
-                  <div className="barcode" aria-hidden="true" />
-                </div>
-              </motion.div>
-            </div>
-          </Reveal>
-
           <Reveal delay={0.15}>
             <pre className="about-code card">
               <span className="prompt">$</span> cat profile.json

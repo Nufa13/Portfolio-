@@ -5,6 +5,7 @@ import { useTypewriter } from '../hooks/useTypewriter'
 import { useCountUp } from '../hooks/useCountUp'
 
 const cvUrl = import.meta.env.BASE_URL + 'Nufa-CV.pdf'
+const photo = import.meta.env.BASE_URL + 'Nufa.jpeg'
 
 const container = {
   hidden: {},
@@ -82,40 +83,30 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0, rotate: 1.5 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="terminal">
-              <div className="terminal-bar">
-                <span className="term-dot red" />
-                <span className="term-dot yellow" />
-                <span className="term-dot green" />
-                <span>nufa@portfolio: ~/developer</span>
+            <div className="id-card">
+              <div className="id-band">
+                <div className="id-brand">
+                  <strong className="id-org">SLIATE</strong>
+                  <small>HNDIT · Student Identity Card</small>
+                </div>
+                <div className="id-chip" aria-hidden="true" />
               </div>
-              <div className="terminal-body">
-                <div>
-                  <span className="cmd">const</span> <span className="k">developer</span> = {'{'}{' '}
-                  <span className="path">profile</span> {'}'}
-                </div>
-                <div>
-                  <span className="prompt">$</span> developer<span className="path">.who()</span>
-                </div>
-                <div>
-                  <span className="comment">// {profile.role}</span>
-                </div>
-                <div>
-                  <span className="prompt">$</span> developer<span className="path">.stack()</span>
-                </div>
-                <div>
-                  <span className="k">['</span>React.js<span className="k">', '</span>PHP
-                  <span className="k">', '</span>MySQL<span className="k">', '</span>PostgreSQL
-                  <span className="k">', '</span>C#<span className="k">']</span>
-                </div>
-                <div>
-                  <span className="prompt">$</span> developer<span className="path">.status()</span>
-                </div>
-                <div>
-                  <span className="s">&gt; Active &amp; open to opportunities &apos;</span>
-                </div>
-                <div>
-                  <span className="prompt">$</span> <motion.span className="caret" />
+
+              <div className="id-photo">
+                <img src={photo} alt={`${profile.name} portrait`} />
+              </div>
+
+              <div className="id-info">
+                <h4>{profile.name}</h4>
+                <p>{profile.role}</p>
+                <span className="tag">Software Developer</span>
+              </div>
+
+              <div className="id-bottom">
+                <div className="barcode" aria-hidden="true" />
+                <div className="id-code">
+                  <small>STUDENT ID</small>
+                  <strong>NN-2026</strong>
                 </div>
               </div>
             </div>
